@@ -11,5 +11,15 @@ $ mkdir db
 $ mkdir db/migration
 ```
 
-Open it on the browser [http://localhost:8094](http://localhost:8080)
+## 2. Run it:
+```bash
+$ mvn clean package
+$ mvn spring-boot:run
+```
+
+Open it on the browser [http://localhost:8080](http://localhost:8080)
 Open the [H2 Console](http://localhost:8080/h2-console). The DB is `jdbc:h2:mem:testdb`.
+
+## 3. Endpoints:
+[http://localhost:8080/customers](http://localhost:8080/customers)
+[http://localhost:8080/customers/1/contacts](http://localhost:8080/customers/1/contacts)
