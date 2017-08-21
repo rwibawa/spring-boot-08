@@ -1,9 +1,13 @@
 package com.example.springboot08.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,8 +25,9 @@ public class Customer {
     private Long id;
 
     private String name;
-    private String contactName;
-    private String email;
-    private String phone;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "customer")
+    private List<Contact> contacts;
 
 }
