@@ -10,3 +10,6 @@ $ cd src/main/resources/
 $ mkdir db
 $ mkdir db/migration
 ```
+
+Open it on the browser [http://localhost:8094](http://localhost:8080)
+Open the [H2 Console](http://localhost:8080/h2-console). The DB is `jdbc:h2:mem:testdb`.
