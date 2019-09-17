@@ -23,3 +23,17 @@ Open the [H2 Console](http://localhost:8080/h2-console). The DB is `jdbc:h2:mem:
 ## 3. Endpoints:
 [http://localhost:8080/customers](http://localhost:8080/customers)
 [http://localhost:8080/customers/1/contacts](http://localhost:8080/customers/1/contacts)
+
+## 4. Add Angular `navisow-ui`:
+```bash
+$ nvm ls
+$ nvm use v12.6.0
+$ npm list -g --depth=0
+$ npm update -g
+$ npm list -g --depth=0
+
+$ ng new navisow-ui
+$ cd navisow-ui/
+$ ng build --help
+$ ng build --output-path ../src/main/resources/static/
+```
