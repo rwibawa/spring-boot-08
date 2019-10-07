@@ -26,11 +26,13 @@ import { TreeComponent } from './tree/tree.component';
 import { MatTreeModule } from '@angular/material/tree';
 import { DragDropComponent } from './drag-drop/drag-drop.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { CdkStepperModule } from '@angular/cdk/stepper';
 import { TableComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { OpenCloseComponent } from './open-close/open-close.component';
+import { CustomStepperComponent } from './custom-stepper/custom-stepper.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { OpenCloseComponent } from './open-close/open-close.component';
     TreeComponent,
     DragDropComponent,
     TableComponent,
-    OpenCloseComponent
+    OpenCloseComponent,
+    CustomStepperComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +68,8 @@ import { OpenCloseComponent } from './open-close/open-close.component';
     DragDropModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    CdkStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
