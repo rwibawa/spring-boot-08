@@ -36,4 +36,6 @@ $ ng new navisow-ui
 $ cd navisow-ui/
 $ ng build --help
 $ ng build --output-path ../src/main/resources/static/
+
+$ ng add @angular/material
 ```
