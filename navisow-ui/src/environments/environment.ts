@@ -1,8 +1,20 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+import { KeycloakConfig } from 'keycloak-angular';
+
+// Add here your keycloak setup infos
+let keycloakConfig: KeycloakConfig = {
+  url: 'http://hela:8088/auth',
+  realm: 'demo',
+  clientId: 'myapp',
+  "credentials": {
+    "secret": "71ba72a2-c61b-4a8f-9a35-6457d23629bf"
+  }  
+};
 
 export const environment = {
+  keycloak: keycloakConfig,
   production: false
 };
 

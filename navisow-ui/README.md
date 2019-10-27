@@ -3,6 +3,9 @@
 ## Angular material:
 * [Guides](https://material.angular.io/guides).
 ```bash
+$ ng add @angular/material
+$ npm i -s hammerjs
+
 $ ng generate @angular/material:address-form address-form
 $ ng generate @angular/material:nav nav
 $ ng generate @angular/material:dashboard dashboard
@@ -10,6 +13,9 @@ $ ng generate @angular/material:table table
 $ ng generate @angular/material:tree tree
 $ ng generate @angular/cdk:drag-drop drag-drop
 $ ng generate component open-close
+
+$ ng generate @angular/cdk:stepper custom-stepper
+$ ng generate component custom-stepper
 ```
 
 Routes:

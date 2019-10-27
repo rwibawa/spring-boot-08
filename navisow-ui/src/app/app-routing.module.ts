@@ -7,9 +7,23 @@ import { DragDropComponent } from './drag-drop/drag-drop.component';
 import { TableComponent } from './table/table.component';
 import { TreeComponent } from './tree/tree.component';
 import { OpenCloseComponent } from './open-close/open-close.component';
-
+import { AppAuthGuard } from './app.authguard';
 
 const routes: Routes = [
+  { 
+    path: 'admin', 
+    // loadChildren: () => SomeModule ,
+    component: DashboardComponent,
+    canActivate: [AppAuthGuard], 
+    data: { roles: ['SuperUser'] }
+  },
+  { 
+    path: 'myapp', 
+    // loadChildren: () => SomeOtherModule ,
+    component: DashboardComponent,
+    canActivate: [AppAuthGuard], 
+    data: { roles: ['SuperUser', 'NormalUser'] }
+  },
   { path: 'address-form', component: AddressFormComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'drag-drop', component: DragDropComponent },
@@ -26,7 +40,8 @@ const routes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AppAuthGuard]
 })
 
 export class AppRoutingModule { 

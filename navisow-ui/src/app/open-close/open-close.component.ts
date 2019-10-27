@@ -6,6 +6,8 @@ import {
   animate,
   transition
 } from '@angular/animations';
+import { Router } from '@angular/router';
+import { KeycloakService } from 'keycloak-angular';
 
 @Component({
   selector: 'app-open-close',
@@ -35,9 +37,15 @@ import {
 })
 export class OpenCloseComponent implements OnInit {
 
-  constructor() { }
+  constructor(protected router: Router, 
+    protected keycloakAngular: KeycloakService) { }
 
   ngOnInit() {
+    try {
+      let userDetails = this.keycloakAngular.getKeycloakInstance().tokenParsed["userDetails"];
+    } catch (e) {
+      console.log('Failed to load user details', e);
+    }
   }
 
   isOpen = true;
